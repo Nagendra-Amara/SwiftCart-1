@@ -2,9 +2,11 @@ import torch
 import cv2
 from pyzbar import pyzbar 
 from flask import request, jsonify
-import mysql.connector
 
-items = {"8906006720114": ["Lion Dates", "https://wawafresh.com/public/uploads/all/tR57MDJuVZmEofqZ7BrOYTqP9SGBV8hutF5CeNhn.jpg"],
+
+items = {"8901526006359":["Lion Dates", "https://wawafresh.com/public/uploads/all/tR57MDJuVZmEofqZ7BrOYTqP9SGBV8hutF5CeNhn.jpg"]
+    ,"8901764042300": ["thumbsup","https://wawafresh.com/public/uploads/all/tR57MDJuVZmEofqZ7BrOYTqP9SGBV8hutF5CeNhn.jpg"]
+         ,"8906006720114": ["Lion Dates", "https://wawafresh.com/public/uploads/all/tR57MDJuVZmEofqZ7BrOYTqP9SGBV8hutF5CeNhn.jpg"],
          "8901030772290": ["Ponds", "https://newassets.apollo247.com/pub/media/catalog/product/p/o/pon0037_2_1.jpg"],
          "8901023015397": ["Godrej aer", "https://cdn01.pharmeasy.in/dam/products_otc/K01212/godrej-aer-power-pocket-bathroom-freshner-assorted-pack-of-5-1-1627280927.jpg"],
          "8901063016873": ["50-50","https://www.bigbasket.com/media/uploads/p/xxl/100012350_11-britannia-50-50-sweet-salty-biscuits.jpg"]}
@@ -17,7 +19,7 @@ from firebase_admin import credentials, firestore
 from datetime import datetime
 
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate(r"C:\Users\Likhit\Downloads\swiftcart-c6125-firebase-adminsdk-teyoz-4213f8d26e.json")
+cred = credentials.Certificate(r"/home/nagendra/Downloads/swiftcart-c6125-firebase-adminsdk-teyoz-a1281890f5.json")
 firebase_admin.initialize_app(cred)
 cap = cv2.VideoCapture(0)
 
